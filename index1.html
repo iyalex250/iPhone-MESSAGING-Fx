@@ -1,0 +1,230 @@
+<!-- Created by Adåm -->
+
+<!-- 
+	FUNCTIONAL OF IPHONE
+	CREATED BY: @IYALEX250
+	JUNE 16, 2020
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>iPhone Messaging</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="https://kit.fontawesome.com/477c354e13.js" crossorigin="anonymous"></script>
+
+  <script src="scripts/messaging.js"></script>
+</head>
+
+<body>
+  <!-- <div  id="apple-logo"><i class="fab fa-apple"></i></div> -->
+  <div id="centered-container">
+    <!--Do Not Touch anything above this-->
+
+    <div class="iphone" id="iphoneLeft">
+
+      <div class="silence-switch outer-button"></div>
+      <div class="volume-rocker-top outer-button"></div>
+      <div class="volume-rocker-bottom outer-button"></div>
+      <div class="power-button outer-button-reversed"></div>
+      <!--...................................TOP SECTION..................................-->
+      <div class="top-section">
+        <i class="arrow left"></i>
+        <div class="top-section-time">12:00</div>
+        <div class="top-section-symbols">
+          <i class="fas fa-signal"></i>
+          <i class="fas fa-wifi"></i>
+          <i class="fas fa-battery-three-quarters"></i>
+        </div>
+        <div class="top-section-middle">
+          <div class="speaker">
+            <div class="front-camera"></div>
+          </div>
+          <div class="top-section-user-pic selectDisable"><i class="fas fa-user-circle"></i></div>
+          <div class="top-section-user-name">Adåm </div>
+        </div>
+        <!--...................................MESSAGE SECTION..................................-->
+        <div class="messages-section" id="messages-left">
+          <div class="message to">Hey Adåm, I'm loving the design of this new iPhone! The camera is the most advanced that Apple has ever created!</div>
+          <div class="message from">I'm glad you like it Genti UTAB! We've been working very hard to make this project a reality!</div>
+        </div>
+        <!--...................................KEYBOARD SECTION..................................-->
+        <div class="keyboard-section">
+
+          <div class="keyboard-keys">
+            <a class="white-key clickable-key" id="q">Q</a>
+            <a class="white-key clickable-key" id="w">W</a>
+            <a class="white-key clickable-key" id="e">E</a>
+            <a class="white-key clickable-key" id="r">R</a>
+            <a class="white-key clickable-key" id="t">T</a>
+            <a class="white-key clickable-key" id="y">Y</a>
+            <a class="white-key clickable-key" id="u">U</a>
+            <a class="white-key clickable-key" id="i">I</a>
+            <a class="white-key clickable-key" id="o">O</a>
+            <a class="white-key clickable-key" id="p">P</a>
+            <div class="keyboard-spacer"></div>
+            <a class="invisible-key">a</a>
+            <a class="white-key clickable-key" id="a">A</a>
+            <a class="white-key clickable-key" id="s">S</a>
+            <a class="white-key clickable-key" id="d">D</a>
+            <a class="white-key clickable-key" id="f">F</a>
+            <a class="white-key clickable-key" id="g">G</a>
+            <a class="white-key clickable-key" id="h">H</a>
+            <a class="white-key clickable-key" id="j">J</a>
+            <a class="white-key clickable-key" id="k">K</a>
+            <a class="white-key clickable-key" id="l">L</a>
+            <div class="keyboard-spacer"></div>
+            <a class="invisible-key">a</a>
+            <a class="white-key" id="capitalizer" onclick="changeCase2()" style="width:20px; margin-left:-20px; margin-right:8px;">&#8679;</a>
+            <a class="white-key clickable-key" id="z">Z</a>
+            <a class="white-key clickable-key" id="x">X</a>
+            <a class="white-key clickable-key" id="c">C</a>
+            <a class="white-key clickable-key" id="v">V</a>
+            <a class="white-key clickable-key" id="b">B</a>
+            <a class="white-key clickable-key" id="n">N</a>
+            <a class="white-key clickable-key" id="m" style=" margin-right:8px;">M</a>
+            <a class="grey-key back_space" style=" width:20px; height:16px;" onclick="back_space_left()"><i class="fas fa-backspace"></i></a>
+            <div class="keyboard-spacer"></div>
+            <a class="grey-key" id="123" onclick="changekeylayout()">123</a>
+            <a class="grey-key" style="font-size:19px; padding-top:5px; padding-bottom:11px; padding-right:5px; padding-left:5px; height:18px;"><i class="far fa-grin"></i></a>
+            <a class="space-bar" onclick="add_space()">space</a>
+            <a class="grey-key" style="padding-left:10px; padding-right:10px; width:60px;">return</a>
+          </div>
+
+          <div class="keyboard-above">
+            <div class="key-add-ons"><i class="fa fa-camera"></i><i class="fab fa-app-store app-store" style="color:white;"></i></div>
+            <div class="cursor">
+              <i class="fas fa-arrow-circle-up inside-input" onclick="sendMessageFromLeft()"></i>
+            </div>
+            <input type="text" id="keyboardinput" class="keyboardinput" placeholder="Message" onfocus="" value="" oninput="" maxlength="1000" type="text" autofocus />
+          </div>
+          <div class="keyboard-apps">
+            <div class="keyboard-app-icon" style="background:#fff;"></div>
+            <div class="keyboard-app-icon" style="background:#376de7;"></div>
+            <div class="keyboard-app-icon" style="background:#1a1918;"></div>
+            <div class="keyboard-app-icon" style="background:#fff;"></div>
+            <div class="keyboard-app-icon" style="background:#fff;"></div>
+            <div class="keyboard-app-icon" style="background:#000000;"></div>
+            <div class="keyboard-app-icon" style="background:#ea445a;"></div>
+            <div class="keyboard-app-icon" style="background:#fff;"></div>
+          </div>
+
+          <div class="keyboard-bottom-symbols">
+            <i class="fas fa-globe globe-symbol"></i>
+            <i class="fas fa-microphone mic-symbol"></i></div>
+          <div class="home-screen-button"></div>
+        </div>
+        <div class="iphone-shadow"></div>
+      </div>
+    </div>
+    <!--END OF FIRST IPHONE-->
+
+    <div class="iphone" id="iphoneRight">
+
+      <div class="silence-switch outer-button"></div>
+      <div class="volume-rocker-top outer-button"></div>
+      <div class="volume-rocker-bottom outer-button"></div>
+      <div class="power-button outer-button-reversed"></div>
+      <!--...................................TOP SECTION..................................-->
+      <div class="top-section">
+        <i class="arrow left"></i>
+        <div class="top-section-time">12:00</div>
+        <div class="top-section-symbols">
+          <i class="fas fa-signal"></i>
+          <i class="fas fa-wifi"></i>
+          <i class="fas fa-battery-three-quarters"></i>
+        </div>
+        <div class="top-section-middle">
+          <div class="speaker">
+            <div class="front-camera"></div>
+          </div>
+          <div class="top-section-user-pic selectDisable"><i class="fas fa-user-circle"></i></div>
+          <div class="top-section-user-name">Gentil UTAB</div>
+        </div>
+        <!--...................................MESSAGE SECTION..................................-->
+        <div class="messages-section" id="messages-right">
+          <div class="message from">Hey Adåm, I'm loving the design of this new iPhone! The camera is the most advanced that Apple has ever created!</div>
+          <div class="message to">I'm glad you like it Gentil UTAB! We've been working very hard to make this project a reality!</div>
+        </div>
+        <!--...................................KEYBOARD SECTION..................................-->
+        <div class="keyboard-section">
+
+          <div class="keyboard-keys">
+            <a class="white-key clickable-key2">Q</a>
+            <a class="white-key clickable-key2">W</a>
+            <a class="white-key clickable-key2" onclick="addThisKey()">E</a>
+            <a class="white-key clickable-key2">R</a>
+            <a class="white-key clickable-key2">T</a>
+            <a class="white-key clickable-key2">Y</a>
+            <a class="white-key clickable-key2">U</a>
+            <a class="white-key clickable-key2">I</a>
+            <a class="white-key clickable-key2">O</a>
+            <a class="white-key clickable-key2">P</a>
+            <div class="keyboard-spacer"></div>
+            <a class="invisible-key">a</a>
+            <a class="white-key clickable-key2">A</a>
+            <a class="white-key clickable-key2">S</a>
+            <a class="white-key clickable-key2">D</a>
+            <a class="white-key clickable-key2">F</a>
+            <a class="white-key clickable-key2">G</a>
+            <a class="white-key clickable-key2">H</a>
+            <a class="white-key clickable-key2">J</a>
+            <a class="white-key clickable-key2">K</a>
+            <a class="white-key clickable-key2">L</a>
+            <div class="keyboard-spacer"></div>
+            <a class="invisible-key">a</a>
+            <a class="white-key" style="width:20px; margin-left:-20px; margin-right:8px;">&#8679;</a>
+            <a class="white-key clickable-key2">Z</a>
+            <a class="white-key clickable-key2">X</a>
+            <a class="white-key clickable-key2">C</a>
+            <a class="white-key clickable-key2">V</a>
+            <a class="white-key clickable-key2">B</a>
+            <a class="white-key clickable-key2">N</a>
+            <a class="white-key clickable-key2" style=" margin-right:8px;">M</a>
+            <a class="grey-key back_space" style=" width:20px; height:16px;" onclick="back_space_right()"><i class="fas fa-backspace"></i></a>
+            <div class="keyboard-spacer"></div>
+            <a class="grey-key">123</a>
+            <a class="grey-key" style="font-size:19px; padding-top:5px; padding-bottom:11px; padding-right:5px; padding-left:5px; height:18px;"><i class="far fa-grin"></i></a>
+            <a class="space-bar" onclick="add_space()">space</a>
+            <a class="grey-key" style="padding-left:10px; padding-right:10px; width:60px;">return</a>
+          </div>
+
+          <div class="keyboard-above">
+            <div class="key-add-ons"><i class="fa fa-camera"></i><i class="fab fa-app-store app-store" style="color:white;"></i></div>
+            <div class="cursor">
+              <i class="fas fa-arrow-circle-up inside-input" onclick="sendMessageFromRight()"></i>
+            </div>
+            <input type="text" id="keyboardinput2" class="keyboardinput" placeholder="Message" onfocus="" value="" oninput="" maxlength="1000" type="text" autofocus />
+          </div>
+          <div class="keyboard-apps">
+            <div class="keyboard-app-icon" style="background:#fff;"></div>
+            <div class="keyboard-app-icon" style="background:#376de7;"></div>
+            <div class="keyboard-app-icon" style="background:#1a1918;"></div>
+            <div class="keyboard-app-icon" style="background:#fff;"></div>
+            <div class="keyboard-app-icon" style="background:#fff;"></div>
+            <div class="keyboard-app-icon" style="background:#000000;"></div>
+            <div class="keyboard-app-icon" style="background:#ea445a;"></div>
+            <div class="keyboard-app-icon" style="background:#fff;"></div>
+          </div>
+          <div class="keyboard-bottom-symbols">
+            <i class="fas fa-globe globe-symbol"></i>
+            <i class="fas fa-microphone mic-symbol"></i></div>
+          <div class="home-screen-button"></div>
+        </div>
+        <div class="iphone-shadow"></div>
+      </div>
+    </div>
+    <!--END OF FIRST IPHONE-->
+
+    <!--End of Centered Container, Do not Delete below this line-->
+  </div>
+  <!--Audio Elements-->
+  <audio id="audio" src="images/keypress.mp3"></audio>
+  <audio id="audio-sent" src="images/sent.mp3"></audio>
+  <audio id="audio-backspace" src="images/backspace.mp3"></audio>
+  <audio id="audio-space" src="images/space.mp3"></audio>
+</body>
+
+</html>
